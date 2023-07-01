@@ -1,4 +1,3 @@
-git init
 git add -A
 git commit -m "add: frontend"
 git branch -M main
