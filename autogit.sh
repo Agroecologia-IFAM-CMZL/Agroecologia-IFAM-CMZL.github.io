@@ -1,4 +1,4 @@
 git add -A
-git commit -m "fix: footer -> pages-entities.html"
+git commit -m "add: Dark Theme"
 git push -u origin main
 git status
