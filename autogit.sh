@@ -1,4 +1,4 @@
 git add -A
-git commit -m "add: Dark Theme"
+git commit -m "alt: NavBar | add: Organizações"
 git push -u origin main
 git status

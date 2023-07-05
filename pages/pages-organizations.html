@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
 <head>
-    <title> Entidades Ambientais </title>
+    <title> Instituições e Entidades </title>
     
     <script src="../assets/dist/js/color-modes.js"></script>
     
@@ -16,6 +16,7 @@
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./styles.css" rel="stylesheet">
     <link href="./styles-toggle.css" rel="stylesheet">
+    <link href="./styles-toggle-config.css" rel="stylesheet">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -25,84 +26,6 @@
     <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
     <link rel="icon" href="../assets/img/favicons/favicon.ico">
     <meta name="theme-color" content="#712cf9">
-
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-
-        .b-example-divider {
-            width: 100%;
-            height: 3rem;
-            background-color: rgba(0, 0, 0, .1);
-            border: solid rgba(0, 0, 0, .15);
-            border-width: 1px 0;
-            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-        }
-
-        .b-example-vr {
-            flex-shrink: 0;
-            width: 1.5rem;
-            height: 100vh;
-        }
-
-        .bi {
-            vertical-align: -.125em;
-            fill: currentColor;
-        }
-
-        .nav-scroller {
-            position: relative;
-            z-index: 2;
-            height: 2.75rem;
-            overflow-y: hidden;
-        }
-
-        .nav-scroller .nav {
-            display: flex;
-            flex-wrap: nowrap;
-            padding-bottom: 1rem;
-            margin-top: -1px;
-            overflow-x: auto;
-            text-align: center;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .btn-bd-primary {
-            --bd-violet-bg: #712cf9;
-            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-            --bs-btn-font-weight: 600;
-            --bs-btn-color: var(--bs-white);
-            --bs-btn-bg: var(--bd-violet-bg);
-            --bs-btn-border-color: var(--bd-violet-bg);
-            --bs-btn-hover-color: var(--bs-white);
-
-            --bs-btn-hover-bg: #6528e0;
-            --bs-btn-hover-border-color: #6528e0;
-
-            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-            --bs-btn-active-color: var(--bs-btn-hover-color);
-
-            --bs-btn-active-bg: #5a23c8;
-            --bs-btn-active-border-color: #5a23c8;
-        }
-
-        .bd-mode-toggle {
-            z-index: 1500;
-        }
-    </style>
 </head>
 <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -233,14 +156,12 @@
                 </button>
 
                 <nav class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <a class="nav-item nav-link link-body-emphasis py-2" aria-current="page" href="./pages-infos.html"> Infos </a>    
+                    <a class="nav-item nav-link link-body-emphasis py-2" aria-current="page" href="./pages-infos.html"> Infos </a>
                     <a class="nav-item nav-link link-body-emphasis py-2" aria-current="page" href="./pages-docs.html"> Docs </a>
                     <a class="nav-item nav-link link-body-emphasis py-2" aria-current="page" href="./pages-matrix.html"> Matriz </a>
                     <a class="nav-item nav-link link-body-emphasis py-2" aria-current="page" href="./pages-teachers.html"> Docentes </a>
                     <a class="nav-item nav-link link-body-emphasis py-2" aria-current="page" href="./pages-students.html"> Egressos </a>
-                    <a class="nav-item nav-link link-body-emphasis py-2" aria-current="page" href="./pages-institutions.html"> Instituições </a>
-                    <a class="nav-item nav-link link-body-emphasis py-2" aria-current="page" href="./pages-entities.html"> Entidades </a>
-                    <a class="nav-item nav-link link-body-emphasis py-2" aria-current="page" href="./pages-ongs.html"> ONGs </a>
+                    <a class="nav-item nav-link link-body-emphasis py-2" aria-current="page" href="./pages-organizations.html"> Organizações </a>
                     <a class="nav-item nav-link link-body-emphasis py-2" aria-current="page" href="./pages-projects.html"> Projetos </a>
                     <a class="nav-item nav-link link-body-emphasis py-2" aria-current="page" href="./pages-news.html"> Notícias </a>
                     <a class="nav-item nav-link link-body-emphasis py-2" aria-current="page" href="./pages-lections.html"> Leituras </a>
@@ -250,59 +171,192 @@
     </div>
 
     <main class="container" style="margin-bottom: 248px;">
+        <div class="text-center">
+            <h1 class="ms-4"> Instituições de Estágio, ONGs Ambientais, Iniciativas Privadas. </h1>
+            <h1 class="ms-4"> Portais de Notícia e muito mais! </h1> <br>
+        </div>
+
         <section class="text-center">
-            <div class="d-flex flex-column flex-sm-row">
-                <div>
-                    <img src="../images/exemplos/exemplo-entidade.jpg" style="width: 70%;" class="ms-4">
-                    <p class="p-3 ms-4"><a class="link-success" href="https://www.greenpeace.org/brasil/" target="_blank"> Greenpeace </a></p>
-                </div>
+            <hr>
 
-                <div>
-                    <img src="../images/exemplos/exemplo-entidade.jpg" style="width: 70%;" class="ms-4">
-                    <p class="p-3 ms-4"><a class="link-success" href="https://www.sosamazonia.org.br/conteudo/" target="_blank"> SOS Amazônia </a></p>
-                </div>
+            <h2> Entidade Estudantil da Agroecologia </h2>
+            
+            <hr>
 
+            <div class="img-fluid d-block justify-content-between align-items-center flex-column flex-sm-row">             
                 <div>
-                    <img src="../images/exemplos/exemplo-entidade.jpg" style="width: 70%;" class="ms-4">
-                    <p class="p-3 ms-4"><a class="link-success" href="https://www.sosma.org.br/" target="_blank"> SOS Mata Atlântica </a></p>
+                    <img src="../images/entidades/img-caamm.png" class="h-50 w-75">
+                    <p class="p-3 ms-4"> C.A.A.M.M. </p>
                 </div>
             </div>
         </section>
 
         <section class="text-center">
-            <div class="d-flex flex-column flex-sm-row">
+            <hr>
+
+            <h2> Entidades de Agroecologia no Brasil e na América Latina </h2>
+
+            <hr>
+
+            <div class="d-flex flex-column flex-sm-row img-fluid rounded mx-auto d-block justify-content-between align-items-center">             
                 <div>
-                    <img src="../images/exemplos/exemplo-entidade.jpg" style="width: 70%;" class="ms-4">
-                    <p class="p-3 ms-4"><a class="link-success" href="https://www.conservation.org/brasil" target="_blank"> CI-Brasil</a></p>
+                    <img src="../images/entidades/entidades-agro-brasil-america/img-aba.png" class="h-50 w-75">
+                    <p class="p-3 ms-4"> A.B.A. </p>
                 </div>
 
                 <div>
-                    <img src="../images/exemplos/exemplo-entidade.jpg" style="width: 70%;" class="ms-4">
-                    <p class="p-3 ms-4"><a class="link-success" href="http://www.renctas.org.br/en" target="_blank"> Renctas </a></p>
+                    <img src="../images/entidades/entidades-agro-brasil-america/img-anda.png" class="h-50 w-75">
+                    <p class="p-3 ms-4"> A.N.D.A. </p>
                 </div>
 
                 <div>
-                    <img src="../images/exemplos/exemplo-entidade.jpg" style="width: 70%;" class="ms-4">
-                    <p class="p-3 ms-4"><a class="link-success" href="https://www.fbds.org.br/" target="_blank"> F.B.D.S. </a></p>
+                    <img src="../images/entidades/entidades-agro-brasil-america/img-socla.png" class="h-50 w-75">
+                    <p class="p-3 ms-4"> S.O.C.L.A. </p>
                 </div>
             </div>
         </section>
 
         <section class="text-center">
-            <div class="d-flex flex-column flex-sm-row">
+            <hr>
+
+            <h2> Grupos & Associações que praticam Agroecologia no Brasil </h2>
+
+            <hr>
+            
+            <div class="d-flex flex-column flex-sm-row img-fluid rounded mx-auto d-block justify-content-between align-items-center">
                 <div>
-                    <img src="../images/exemplos/exemplo-entidade.jpg" style="width: 70%;" class="ms-4">
-                    <p class="p-3 ms-4"><a class="link-success" href="https://www.corredorecologico.com.br/" target="_blank"> Corredor Ecológico </a></p>
+                    <img src="../images/entidades/grupos-agro-brasil/img-jcs.png" class="h-50 w-75">
+                    <p class="p-3 ms-4"> Juquira Candirú </p>
                 </div>
 
                 <div>
-                    <img src="../images/exemplos/exemplo-entidade.jpg" style="width: 70%;" class="ms-4">
-                    <p class="p-3 ms-4"><a class="link-success" href="https://mariaperegrina.org.br/escola/uma-vida-organica" target="_blank"> Maria Peregrina </a></p>
+                    <img src="../images/entidades/grupos-agro-brasil/img-mst.jpg" class="h-50 w-75">
+                    <p class="p-3 ms-4"> M.S.T. </p>
                 </div>
 
                 <div>
-                    <img src="../images/exemplos/exemplo-entidade.jpg" style="width: 70%;" class="ms-4">
-                    <p class="p-3 ms-4"><a class="link-success" href="https://iis.org.br/" target="_blank"> Ilhabela Sustentável </a></p>
+                    <img src="../images/entidades/grupos-agro-brasil/img-apoam.png" class="h-50 w-75">
+                    <p class="p-3 ms-4"> A.P.O.A.M. </p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="d-flex flex-column flex-sm-row img-fluid rounded mx-auto d-block justify-content-between align-items-center">
+                <div>
+                    <img src="../images/entidades/grupos-agro-brasil/img-rema.png" class="h-50 w-75">
+                    <p class="p-3 ms-4"> R.E.M.A. </p>
+                </div>
+
+                <div>
+                    <img src="../images/entidades/grupos-agro-brasil/img-apoi.png" class="h-50 w-75">
+                    <p class="p-3 ms-4"> A.P.O.I. </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center">
+            <hr>
+
+            <h2> ONGs & Iniciativas ligadas à Agroecologia </h2>
+
+            <hr>
+
+            <div class="d-flex flex-column flex-sm-row img-fluid rounded mx-auto d-block justify-content-between align-items-center">
+                <div>
+                    <img src="../images/entidades/ongs-iniciativas-agro/img-agenda.png" class="h-50 w-75">
+                    <p class="p-3 ms-4"> Agenda Otsch </p>
+                </div>
+
+                <div>
+                    <img src="../images/entidades/ongs-iniciativas-agro/img-casa-rio.png" class="h-50 w-75">
+                    <p class="p-3 ms-4"> Casa do Rio </p>
+                </div>
+
+                <div>
+                    <img src="../images/entidades/ongs-iniciativas-agro/img-musa.jpg" class="h-50 w-75">
+                    <p class="p-3 ms-4"> M.U.S.A. </p>
+                </div>
+
+                <div>
+                    <img src="../images/entidades/ongs-iniciativas-agro/img-panc.png" class="h-50 w-75">
+                    <p class="p-3 ms-4"> P.A.N.C. </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center">
+            <hr>
+
+            <h2> Órgãos Públicos ligados a Pesquisa Cientifica Ambiental </h2>
+
+            <hr>
+
+            <div class="d-flex flex-column flex-sm-row img-fluid rounded mx-auto d-block justify-content-between align-items-center">
+                <div>
+                    <img src="../images/entidades/orgaos-publicos/img-embrapa.png" class="h-50 w-75">
+                    <p class="p-3 ms-4"> EMBRAPA </p>
+                </div>
+
+                <div>
+                    <img src="../images/entidades/orgaos-publicos/img-fapeam.png" class="h-50 w-75">
+                    <p class="p-3 ms-4"> FAPEAM </p>
+                </div>
+
+                <div>
+                    <img src="../images/entidades/orgaos-publicos/img-fiocruz.png" class="h-50 w-75">
+                    <p class="p-3 ms-4"> FIOCRUZ </p>
+                </div>
+            </div>
+
+            <hr>
+            
+            <div class="d-flex flex-column flex-sm-row img-fluid rounded mx-auto d-block justify-content-between align-items-center">
+                <div>
+                    <img src="../images/entidades/orgaos-publicos/img-idam.png" class="h-50 w-75">
+                    <p class="p-3 ms-4"> I.D.A.M. </p>
+                </div>
+
+                <div>
+                    <img src="../images/entidades/orgaos-publicos/img-inpa.png" class="h-50 w-75">
+                    <p class="p-3 ms-4"> I.N.P.A. </p>
+                </div>
+
+                <div>
+                    <img src="../images/entidades/orgaos-publicos/img-sepror.png" class="h-50 w-75">
+                    <p class="p-3 ms-4"> S.E.P.R.O.R. </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center">
+            <hr>
+
+            <h2> Portais de Noticias - Agroecologia </h2>
+
+            <hr>
+
+            <div class="d-flex flex-column flex-sm-row img-fluid rounded mx-auto d-block justify-content-between align-items-center">
+                <div>
+                    <img src="../images/entidades/portais-agro/img-agro-rede.png" class="h-50 w-75">
+                    <p class="p-3 ms-4"> Agro em Rede </p>
+                </div>
+
+                <div>
+                    <img src="../images/entidades/portais-agro/img-aspta.png" class="h-50 w-75">
+                    <p class="p-3 ms-4"> A.S.P.T.A. </p>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row img-fluid rounded mx-auto d-block justify-content-between align-items-center">
+                <div>
+                    <img src="../images/entidades/portais-agro/img-mapa-feiras.png" class="h-50 w-75">
+                    <p class="p-3 ms-4"> Mapa de Feiras </p>
+                </div>
+
+                <div>
+                    <img src="../images/entidades/portais-agro/img-olho-rural.png" class="h-50 w-75">
+                    <p class="p-3 ms-4"> Olho nos Ruralistas </p>
                 </div>
             </div>
         </section>
