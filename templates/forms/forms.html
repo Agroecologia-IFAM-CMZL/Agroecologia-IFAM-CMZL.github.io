@@ -2,8 +2,6 @@
 <html lang="en" data-bs-theme="auto">
   <head>
     <title> Forms Conteudo </title>
-    
-    <script src="../../assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,37 +28,37 @@
             <img class="mb-4 mx-auto d-block" src="../../assets/brand/bootstrap-logo.svg" width="72" height="57">
 
             <div class="form-group mb-4">
-                <label for="title">Título</label>
-                <input type="text" class="form-control" id="title" placeholder="Título da Materia">
+                <label for="idTitle">Título</label>
+                <input required type="text" class="form-control" id="idTitle" placeholder="Título da Materia">
             </div>
 
             <div class="form-group mb-4">
-                <label for="title">Sub-título</label>
-                <input type="text" class="form-control" id="subtitle" placeholder="Sub-título da Materia">
+                <label for="idSubtitle">Sub-título</label>
+                <input required type="text" class="form-control" id="idSubtitle" placeholder="Sub-título da Materia">
             </div>
 
             <div class="form-group mb-4">
-                <label for="parag1">Parágrafo 1</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <label for="idParagraph1">Parágrafo 1</label>
+                <textarea class="form-control" id="idParagraph1" rows="3"></textarea>
             </div>
 
             <div class="form-group mb-4">
-                <label for="parag2">Parágrafo 2</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <label for="idParagraph2">Parágrafo 2</label>
+                <textarea class="form-control" id="idParagraph2" rows="3"></textarea>
             </div>
 
             <div class="form-group mb-4">
-                <label for="parag1">Parágrafo 3</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <label for="idParagraph3">Parágrafo 3</label>
+                <textarea class="form-control" id="idParagraph3" rows="3"></textarea>
             </div>
 
-            <button class="btn btn-success w-40 py-2 float-start" type="submit">Enviar</button>
+            <button class="btn btn-success w-40 py-2 float-start" type="submit" onsubmit="sendData()">Enviar</button>
 
             <a href="../../index.html" class="btn btn-outline-success w-40 py-2 float-end" role="button">Pág. Inicial</a>
           </form>
     </main>
 
     <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script async defer src="../../scripts/auth.js"></script>"
+    <script async defer src="./script.js"></script>
 </body>
 </html>
