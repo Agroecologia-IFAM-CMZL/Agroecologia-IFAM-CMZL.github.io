@@ -1,0 +1,17 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "1. Feitos",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "send": "node ./email/send-emails.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "postmark": "^3.0.18"
+  }
+}
