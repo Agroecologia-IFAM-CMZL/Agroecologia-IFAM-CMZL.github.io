@@ -1,3 +1,4 @@
+/*
 async function sendData() {
     const email = document.getElementById("idEmail");
     const senha = document.getElementById("idSenha");
@@ -30,7 +31,7 @@ async function sendData() {
                     if (form.checkValidity()) {
                         window.location.href = "../forms/forms.html";
                     }
-                });*/
+                });
             } else {
                 window.location.href = "./login.html";
             }
@@ -39,4 +40,49 @@ async function sendData() {
         });
 
     return formData;
+}
+*/
+
+/*
+    const dataForm = {
+        name: document.getElementById("idNome").value,
+        email: document.getElementById("idEmail").value, 
+        senha: document.getElementById("idSenha").value
+    };
+
+    const formJSON = JSON.stringify(dataForm.serializeArray());
+    // $(document.getElementsByName("#my-form")) <-> dataForm
+    
+    $.ajax({
+        type: "POST",
+        url: "http://localhost:3030/api/user/login",
+        data: formJSON,
+        success: () => { console.log("Sucess!");},
+        dataType: "json",
+        contentType : "application/json"
+    });
+*/
+
+function sendData() {
+    let dataForm = {
+        name: document.getElementById("idNome").value,
+        email: document.getElementById("idEmail").value, 
+        senha: document.getElementById("idSenha").value
+    };
+
+    const dataCheck = {
+        name: "coordagro",
+        email: "coordagro@ifam.com",
+        senha: "coordagro@ifam"
+    }
+
+    if (
+        dataForm.name === dataCheck.name &&
+        dataForm.email === dataCheck.email &&
+        dataForm.senha === dataCheck.senha
+    ) {
+        document.getElementById("bt-submit").onclick = function () {
+            location.href = "../forms/forms.html";
+        };
+    }
 }

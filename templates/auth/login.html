@@ -24,7 +24,7 @@
 </head>
 <body class="d-flex align-items-center py-4 bg-body-tertiary">
     <main class="form-signin w-100 m-auto">
-        <form class="text-center" name="my-form" action="http://localhost:3030/api/user/login" method="post">
+        <form class="text-center" name="my-form">
             <img class="mb-4 justify-content-center" src="../../assets/brand/bootstrap-logo.svg" width="75" height="60">
             <h1 class="h3 mb-3 fw-normal">Login</h1>
 
@@ -41,8 +41,8 @@
                 <label for="pwd-field" class="form-label">Senha</label>
             </div>
 
-            <button class="btn btn-success w-100 py-2" value="submit" type="submit" onclick="submitForm()">Entrar</button>
-            <!-- <a id="btnSignUp" class="btn btn-success w-100 py-2" role="button" onclick="sendData()"> Entrar </a> -->
+            <!-- <button id="bt-submit" class="btn btn-success w-100 py-2" type="submit" onsubmit="submitForm()">Entrar</button> -->
+            <a id="bt-submit" class="btn btn-success w-100 py-2" role="button" onclick="sendData()"> Entrar </a>
 
             <p class="mt-5 mb-3 text-body-secondary">&copy; 2017 - 2023</p>
         </form>
@@ -53,32 +53,6 @@
     </main>
 
     <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript">
-        function submitForm(){
-            const xhr = new XMLHttpRequest();
-            xhr.open(form.method, form.action, true);
-            xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-
-            const dataForm = {
-                name: document.getElementById("idNome").value,
-                email: document.getElementById("idEmail").value, 
-                senha: document.getElementById("idSenha").value
-            };
-
-            const formJSON = JSON.stringify(dataForm.serializeArray());
-            // $(document.getElementsByName("#my-form")) <-> dataForm
-
-            console.log(formJSON);
-
-            $.ajax({
-                type: "POST",
-                url: "http://localhost:3030/api/user/login",
-                data: formJSON,
-                success: () => { console.log("Sucess!");},
-                dataType: "json",
-                contentType : "application/json"
-            });
-        }
-    </script>
+    <script async defer type="text/javascript" src="./script.js"></script>
 </body>
 </html>
