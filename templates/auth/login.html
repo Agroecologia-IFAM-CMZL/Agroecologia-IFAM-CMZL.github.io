@@ -29,6 +29,10 @@
             <h1 class="h3 mb-3 fw-normal">Login</h1>
 
             <div class="form-floating">
+                <input required name="nome-field" id="idNome" type="text" class="form-control rounded" placeholder="nome">
+                <label for="nome-field" class="form-label">Nome</label>
+            </div>
+            <div class="form-floating">
                 <input required name="email-field" id="idEmail" type="email" class="form-control rounded" placeholder="Email">
                 <label for="email-field" class="form-label">Email</label>
             </div>
@@ -51,18 +55,25 @@
     <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript">
         function submitForm(){
-            alert("Sending Json");
-
-            var xhr = new XMLHttpRequest();
+            const xhr = new XMLHttpRequest();
             xhr.open(form.method, form.action, true);
             xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
 
-            var formData = JSON.stringify($("#my-form").serializeArray());
-        
+            const dataForm = {
+                name: document.getElementById("idNome").value,
+                email: document.getElementById("idEmail").value, 
+                senha: document.getElementById("idSenha").value
+            };
+
+            const formJSON = JSON.stringify(dataForm.serializeArray());
+            // $(document.getElementsByName("#my-form")) <-> dataForm
+
+            console.log(formJSON);
+
             $.ajax({
                 type: "POST",
                 url: "http://localhost:3030/api/user/login",
-                data: formData,
+                data: formJSON,
                 success: () => { console.log("Sucess!");},
                 dataType: "json",
                 contentType : "application/json"
