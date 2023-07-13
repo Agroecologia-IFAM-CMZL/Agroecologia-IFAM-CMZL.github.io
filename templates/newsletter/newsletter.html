@@ -2,8 +2,6 @@
 <html lang="en" data-bs-theme="auto">
 <head>
     <title> Newsletter </title>
-    
-    <script src="../../assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,11 +32,12 @@
             <p> Junte-se ao nosso clube de leitores </p>
 
             <div class="form-floating mb-3">
-                <input required id="idEmail" type="email" class="form-control w-100" placeholder="Seu Email">
+                <input required id="idEmail" type="email" class="form-control w-100 rounded" placeholder="Seu Email">
                 <label for="idEmail"> Seu Email </label>
             </div>
 
-            <a id="btnLogin" class="btn btn-success w-100 py-2" role="button"> Cadastrar </a> 
+            <!-- <button class="btn btn-success w-100 py-2" value="submit" type="submit" onclick="sendEmail()">Entrar</button> -->
+            <a id="btnLogin" class="btn btn-success w-100 py-2" role="button" onclick="sendEmail()"> Cadastrar </a>
 
             <p class="mt-5 mb-3 text-body-secondary"> &copy; 2017 - 2023 </p>
         </form>

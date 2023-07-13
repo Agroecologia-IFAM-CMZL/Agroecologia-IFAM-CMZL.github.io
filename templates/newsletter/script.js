@@ -7,3 +7,10 @@ btnSubmit.addEventListener("click", function() {
         window.location.href = "./sent-email.html";
     }
 });
+
+function sendEmail() {
+    const emailSent = document.getElementById("idEmail").value;
+    console.log(emailSent);
+
+    // (...)
+}

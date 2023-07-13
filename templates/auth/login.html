@@ -1,9 +1,7 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head>
+<head>
     <title> Area do Coordenador </title>
-    
-    <script src="../../assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,20 +24,21 @@
 </head>
 <body class="d-flex align-items-center py-4 bg-body-tertiary">
     <main class="form-signin w-100 m-auto">
-        <form class="text-center">
-            <img class="mb-4 justify-content-center" src="../../assets/brand/bootstrap-logo.svg" width="72" height="57">
+        <form class="text-center" name="my-form" action="http://localhost:3030/api/user/login" method="post">
+            <img class="mb-4 justify-content-center" src="../../assets/brand/bootstrap-logo.svg" width="75" height="60">
             <h1 class="h3 mb-3 fw-normal">Login</h1>
 
             <div class="form-floating">
-                <input required type="text" class="form-control" id="floatingInput" placeholder="Name">
-                <label for="floatingInput">Nome</label>
+                <input required name="email-field" id="idEmail" type="email" class="form-control rounded" placeholder="Email">
+                <label for="email-field" class="form-label">Email</label>
             </div>
             <div class="form-floating">
-                <input required type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">Senha</label>
+                <input required name="pwd-field" id="idSenha" type="password" class="form-control rounded" placeholder="Senha">
+                <label for="pwd-field" class="form-label">Senha</label>
             </div>
 
-            <a id="btnSignUp" class="btn btn-success w-100 py-2" role="button"> Entrar </a>
+            <button class="btn btn-success w-100 py-2" value="submit" type="submit" onclick="submitForm()">Entrar</button>
+            <!-- <a id="btnSignUp" class="btn btn-success w-100 py-2" role="button" onclick="sendData()"> Entrar </a> -->
 
             <p class="mt-5 mb-3 text-body-secondary">&copy; 2017 - 2023</p>
         </form>
@@ -50,6 +49,25 @@
     </main>
 
     <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./script.js"></script>
+    <script type="text/javascript">
+        function submitForm(){
+            alert("Sending Json");
+
+            var xhr = new XMLHttpRequest();
+            xhr.open(form.method, form.action, true);
+            xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+            var formData = JSON.stringify($("#my-form").serializeArray());
+        
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:3030/api/user/login",
+                data: formData,
+                success: () => { console.log("Sucess!");},
+                dataType: "json",
+                contentType : "application/json"
+            });
+        }
+    </script>
 </body>
 </html>
