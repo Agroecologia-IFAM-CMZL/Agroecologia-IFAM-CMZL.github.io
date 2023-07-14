@@ -3,6 +3,8 @@
 <head>
     <title> Newsletter </title>
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -24,7 +26,7 @@
 </head>
 <body class="d-flex align-items-center py-4 bg-body-tertiary">    
     <main class="form-signin w-100 m-auto">
-        <form class="text-center">
+        <form class="text-center" id="contact-form" method="post">
             <img class="mb-4 justify-content-center" src="../../assets/brand/bootstrap-logo.svg" width="72" height="57">
             
             <h1 class="h3 mb-3 fw-normal"> NewsLetter </h1>
@@ -32,12 +34,13 @@
             <p> Junte-se ao nosso clube de leitores </p>
 
             <div class="form-floating mb-3">
-                <input required id="idEmail" type="email" class="form-control w-100 rounded" placeholder="Seu Email">
-                <label for="idEmail"> Seu Email </label>
+                <input required id="input-email" type="email" class="form-control w-100 rounded" placeholder="Seu Email">
+                <label for="labelEmail"> Seu Email </label>
             </div>
 
-            <!-- <button class="btn btn-success w-100 py-2" value="submit" type="submit" onclick="sendEmail()">Entrar</button> -->
-            <a id="btnLogin" class="btn btn-success w-100 py-2" role="button" onclick="sendEmail()"> Cadastrar </a>
+            <!-- <button id="bt-submit" class="btn btn-success w-100 py-2" type="submit"> Entrar </button> -->
+            <!-- <a id="bt-submit" class="btn btn-success w-100 py-2" onclick="sendEmail()"> Cadastrar </a> -->
+            <input id="bt-submit" class="btn btn-success w-100 py-2" type="button" value="Cadastrar" onclick="sendEmail()" />
 
             <p class="mt-5 mb-3 text-body-secondary"> &copy; 2017 - 2023 </p>
         </form>
