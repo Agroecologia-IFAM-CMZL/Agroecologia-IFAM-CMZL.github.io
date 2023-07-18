@@ -1,46 +1,30 @@
 function sendData() {
-    let dataForm = {
-        name: document.getElementById("idNome").value,
-        email: document.getElementById("idEmail").value, 
-        senha: document.getElementById("idSenha").value
-    };
-
-    const dataCheck = {
-        name: "coordagro",
-        email: "coordagro@ifam.com",
-        senha: "coordagro@ifam"
-    }
-
-    if (
-        dataForm.name === dataCheck.name &&
-        dataForm.email === dataCheck.email &&
-        dataForm.senha === dataCheck.senha
-    ) {
-        document.getElementById("bt-submit").onclick = function () {
-            location.href = "../forms/forms.html";
-        };
-    }
-}
-
-// submit forms to backend
-/*
-document.getElementById("bt-submit").onclick = function () {
     fetch(
-        'http://localhost:3030/api/email', {
+        'http://localhost:3030/api/user/login', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            "name": document.getElementById("input-name").value,
-            "email": document.getElementById("input-email").value,
-            "password": document.getElementById("input-pwd").value
+            "username": document.getElementById("idNome").value,
+            "email": document.getElementById("idEmail").value,
+            "password": document.getElementById("idSenha").value
         })
+    })
+    .then(response => {
+        if (response.ok) {
+            location.href = "../forms/forms.html";
+        } else {
+            throw new Error('Network Response Error!');
+        }
+        
+        return response.json();
+    })
+    .then(json => {
+        localStorage.setItem('accessToken', JSON.stringify(json.accessToken));
+    })
+    .catch(error => {
+        console.log(error);
     });
-
-    if (response.ok) {
-        location.href = "./sent-email.html";
-    }
-};
-*/
+}

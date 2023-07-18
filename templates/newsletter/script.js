@@ -1,4 +1,16 @@
 function sendEmail() {
+    fetch(
+        'http://localhost:3030/api/email', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "email": document.getElementById("input-email").value,
+        })
+    });
+
     Email.send({
         Host: "smtp.elasticemail.com",
         Username: "2021002252@ifam.edu.br",
@@ -8,7 +20,6 @@ function sendEmail() {
         Subject: "Bem-Vindo a NewsLetter da Agroecologia",
         Body: "Estamos trabalhando no desenvolvimento desse recurso ..."
     }).then(function () {
-        // alert({ message: "Mail sent successfully"});
         location.href = "./sent-email.html";
     });
 }

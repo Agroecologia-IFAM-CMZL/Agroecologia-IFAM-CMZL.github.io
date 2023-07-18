@@ -1,31 +1,29 @@
-function sendData() {
-    const title = document.getElementById("idTitle");
-    const subtitle = document.getElementById('idSubtitle');
-    const paragraphs = [
-        document.getElementById('idParagraph1'), 
-        document.getElementById('idParagraph2'), 
-        document.getElementById('idParagraph3')
-    ];
+const accessToken = localStorage.getItem('accessToken').replace(/['"]+/g, ""); // tirando as aspas
 
-    fetch('http://localhost:3000/news', {
+function sendForms() {
+    fetch('http://localhost:3030/api/news', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': "Bearer " + accessToken
         },
         body: JSON.stringify({
-            title: title.value,
-            subtitle: subtitle.value,
-            paragraph1: paragraphs[0].value,
-            paragraph2: paragraphs[1].value,
-            paragraph3: paragraphs[2].value,
+            title: document.getElementById('idTitle').value,
+            subtitle: document.getElementById('idSubtitle').value,
+            paragraph1: document.getElementById('idParagraph1').value,
+            paragraph2: document.getElementById('idParagraph2').value,
+            paragraph3: document.getElementById('idParagraph3').value,
         })
     })
-        .then(response => {
-            if (response.ok) {
-                console.log('News Sent successfully');
-            } else {
-                console.log('An error occurred! Error ' + response.status);
-            }
-        })
-        .catch(error => console.error(error));
+    .then(response => {
+        if (response.ok) {
+            console.log('News Sent successfully');
+        } else {
+            throw new Error('Network Response Error!');
+        }
+    })
+    .catch(error => {
+        console.log(error);
+    });
 }
