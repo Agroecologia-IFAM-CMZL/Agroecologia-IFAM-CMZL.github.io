@@ -1,6 +1,6 @@
 function sendData() {
     fetch(
-        'http://localhost:3030/api/user/login', {
+        'https://rest-api-website.onrender.com/api/user/login', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',

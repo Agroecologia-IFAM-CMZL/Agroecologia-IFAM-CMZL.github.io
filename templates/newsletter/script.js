@@ -1,6 +1,6 @@
 function sendEmail() {
     fetch(
-        'http://localhost:3030/api/email', {
+        'https://rest-api-website.onrender.com/api/email', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
