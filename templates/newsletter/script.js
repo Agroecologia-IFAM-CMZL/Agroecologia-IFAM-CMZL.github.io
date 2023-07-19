@@ -12,6 +12,14 @@ function sendEmail() {
         })
     });
 
+    const templateHTML = fetch(
+        'https://raw.githubusercontent.com/Agroecologia-IFAM-CMZL/Agroecologia-IFAM-CMZL.github.io/main/templates/newsletter/templates.html'
+    )
+    .then(response => response.text())
+    .then(data => {
+        console.log(data);
+    });
+ 
     Email.send({
         Host: "smtp.elasticemail.com",
         Username: "2021002252@ifam.edu.br",
@@ -19,7 +27,7 @@ function sendEmail() {
         From: "2021002252@ifam.edu.br",
         To: document.getElementById("input-email").value,
         Subject: "Bem-Vindo a NewsLetter da Agroecologia",
-        Body: "Estamos trabalhando no desenvolvimento desse recurso ..."
+        Body: templateHTML,
     }).then(function () {
         location.href = "./sent-email.html";
     });
