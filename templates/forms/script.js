@@ -8,6 +8,7 @@ function sendForms() {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
+            'Origin-Trial': 'admin-ifam-2023-agro',
             'Authorization': "Bearer " + accessToken
         },
         body: JSON.stringify({

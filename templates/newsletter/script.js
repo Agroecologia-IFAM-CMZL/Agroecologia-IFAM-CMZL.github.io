@@ -4,7 +4,8 @@ function sendEmail() {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Origin-Trial': 'admin-ifam-2023-agro'
         },
         body: JSON.stringify({
             "email": document.getElementById("input-email").value,
