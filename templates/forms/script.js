@@ -1,9 +1,9 @@
-const accessToken = localStorage.getItem('accessToken').replace(/['"]+/g, ""); // tirando as aspas
+let accessToken = localStorage.getItem('accessToken').replace(/['"]+/g, ""); // tirando as aspas
 
-function sendForms() {
+async function sendForms() {
     // const accessToken = localStorage.getItem('accessToken');
 
-    fetch('https://rest-api-website.onrender.com/api/news', {
+    await fetch('https://rest-api-website.onrender.com/api/news', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',

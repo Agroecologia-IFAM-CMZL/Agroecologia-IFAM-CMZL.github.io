@@ -8,6 +8,4 @@ client.onreadystatechange = function() {
     }
 }
 
-const myClient = client.response;
-
-export default myClient;
+client.send();

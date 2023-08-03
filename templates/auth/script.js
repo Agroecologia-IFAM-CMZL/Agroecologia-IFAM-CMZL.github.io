@@ -1,5 +1,5 @@
-function sendData() {
-    fetch(
+async function sendData() {
+    await fetch(
         'https://rest-api-website.onrender.com/api/user/login', {
         method: 'POST',
         headers: {
