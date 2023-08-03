@@ -1,4 +1,4 @@
 git add -A
-git commit -m "newletter: Email API -> done"
+git commit -m "working: send Template for subscribed"
 git push -u origin main
 git status
