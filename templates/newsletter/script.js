@@ -1,39 +1,9 @@
 function sendEmail() {
-    // sendEmailDB();
     // sendTemplate();
-    let address = document.getElementById("input-email").value;
-
-    fetch(
-        "https://rest-api-website.onrender.com/api/email", {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            "email": address,
-        })
-    });
-    
-    Email.send({
-        SecureToken : "0520e510-b4ae-4f07-85e9-4e6200c1f95a",
-        To : address,
-        From : "vinicius.souza5530@gmail.com",
-        Subject : "Newsletter da Agroecologia",
-        Body : "Testando EMAIL API pela 3@ vez!",
-    })
-    .then(function() {
-        message => console.log(message);
-    })
-    .then(
-        location.href = "./sent-email.html"
-    );
+    // sendEmailDB();
 }
 
-/*
 function sendEmailDB() {
-    let address = document.getElementById("input-email").value;
-
     fetch(
         "https://rest-api-website.onrender.com/api/email", {
         method: 'POST',
@@ -42,31 +12,23 @@ function sendEmailDB() {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            "email": address,
+            "email": document.getElementById("input-email").value,
         })
     });
 }
-*/
 
-/*
-function sendTemplate() {
-    let address = document.getElementById("input-email").value;
-    
+function sendTemplate() {    
     Email.send({
-        SecureToken : "12b643dc-3585-4f59-b78d-aae35cf24124",
-        To : address,
-        From : "vinicius.souza5530@gmail.com",
-        Subject : "Newsletter da Agroecologia",
-        Body : "Testando EMAIL API pela 3@ vez!",
-    })
-    .then(function() {
-        message => console.log(message);
+        SecureToken: "fc5c7d34-dae7-44c4-9bdf-b932d28e0ca3",
+        To: document.getElementById("input-email").value,
+        From: "vinicius.souza5530@gmail.com",
+        Subject : "This is the subject",
+        Body : "And this is the body"
     })
     .then(
         location.href = "./sent-email.html"
     );
 }
-*/
 
 /*
 function sendTemplate() {
