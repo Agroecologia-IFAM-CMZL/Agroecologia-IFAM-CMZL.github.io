@@ -1,4 +1,4 @@
 git add -A
-git commit -m "update: pages -> pages-infos.html"
+git commit -m "update: scripts-news.js worked"
 git push -u origin main
 git status
