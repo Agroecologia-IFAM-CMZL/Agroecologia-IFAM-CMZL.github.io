@@ -1,4 +1,5 @@
-fetch('http://localhost:8080/users/{id}/news', {
+// https://agro-server.onrender.com
+fetch('https://agro-server.onrender.com/users/6428b8ff-d438-464a-a312-170f1dc995d5/news', {
     method: 'GET',
     mode: 'cors',
     headers: {
@@ -13,8 +14,8 @@ fetch('http://localhost:8080/users/{id}/news', {
     return response.json();
 }).then(response => {
     for(var count = 0; count < response.length; count++) {
-
         var responseElement = document.createElement('div');
+
         var htmlContent = `
         <div class="accordion-item">
             <h2 class="accordion-header">
@@ -28,7 +29,10 @@ fetch('http://localhost:8080/users/{id}/news', {
 
             <div id="collapse${count}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <strong>${response[count].caption}</strong> ${response[count].paragraphInit} <code>code</code>, ${response[count].paragraphMiddle} <br>
+                    <h2 style="text-align: center;"><strong>${response[count].caption}</strong> </h2>
+                    <p>${response[count].paragraphInit} <code>code</code>,</p>
+                    <p>${response[count].paragraphMiddle}.</p>
+                    <p>${response[count].paragraphEnd}.</p>
                     <a href="./news/news-example.html" class="link-success"> Saiba Mais </a>
                 </div>
             </div>
@@ -40,7 +44,6 @@ fetch('http://localhost:8080/users/{id}/news', {
 
         // get inside a div
         var divAccordion = document.getElementById('accordionExample');
-
         divAccordion.appendChild(responseElement);
     }
 }).catch(error => {

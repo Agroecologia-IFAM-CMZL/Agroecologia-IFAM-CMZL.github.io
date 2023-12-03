@@ -1,4 +1,4 @@
 git add -A
-git commit -m "update: scripts-news.js integration successfully"
+git commit -m "update: integrated with agro-server-api"
 git push -u origin main
 git status
