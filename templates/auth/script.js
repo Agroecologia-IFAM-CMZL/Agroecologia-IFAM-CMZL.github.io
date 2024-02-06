@@ -1,11 +1,12 @@
 async function sendData() {
     await fetch(
-        'https://rest-api-website.onrender.com/api/user/login', {
+        'http://localhost:3030/api/user/login', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-            'Origin-Trial': 'admin-ifam-2023-agro',
+            'Access-Control-Allow-Origin': 'Origin',
+            "Access-Control-Allow-Credentials": "true"
         },
         body: JSON.stringify({
             "username": document.getElementById("idNome").value,

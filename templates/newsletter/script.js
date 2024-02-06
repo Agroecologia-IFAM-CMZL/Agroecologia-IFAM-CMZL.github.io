@@ -1,55 +1,41 @@
-function sendEmail() {
+function sentEmail() {
+    sendEmailToDB();
     // sendTemplate();
-    // sendEmailDB();
 }
 
-function sendEmailDB() {
-    fetch(
-        "https://rest-api-website.onrender.com/api/email", {
+async function sendEmailToDB() {
+    await fetch(
+        "http://localhost:3030/api/email/", {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
+            "Access-Control-Allow-Credentials": "true",
         },
         body: JSON.stringify({
             "email": document.getElementById("input-email").value,
         })
-    });
-}
-
-function sendTemplate() {    
-    Email.send({
-        SecureToken: "fc5c7d34-dae7-44c4-9bdf-b932d28e0ca3",
-        To: document.getElementById("input-email").value,
-        From: "vinicius.souza5530@gmail.com",
-        Subject : "This is the subject",
-        Body : "And this is the body"
     })
     .then(
         location.href = "./sent-email.html"
     );
 }
 
-/*
-function sendTemplate() {
-    window.onload = function() {
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            // event.preventDefault();
-
-            // generate a five digit number for the contact_number variable
-            this.contact_number.value = Math.random() * 100000 | 0;
-
-            // these IDs from the previous steps
-            emailjs.sendForm('service_yizm0pj', 'template_fstefd3', '#contact-form')
-                .then(function() {
-                    console.log('SUCCESS!');
-                }, function(error) {
-                    console.log('FAILED!', error);
-                })
-                .then(function() {
-                    location.href = "./sent-email.html";
-                });
-        });
-    }
+async function sendTemplate() {    
+    await Email.send({
+        SecureToken: "fc5c7d34-dae7-44c4-9bdf-b932d28e0ca3",
+        To: document.getElementById("input-email").value,
+        From: "vinicius.souza5530@gmail.com",
+        Subject : "This is the subject",
+        Body : "And this is the body"
+    })
 }
-*/
+
+function sendEmailTest() {
+    const htmlContent = "<html><body><h1>Hello World!</h1></body></html>"; // Replace with your HTML content
+    const subject = "Email Subject"; // Replace with your email subject
+    const recipientEmail = document.getElementById("input-email").value; // Replace with the recipient's email address
+    const emailLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(htmlContent)}`;
+  
+    window.location.href = emailLink;
+}

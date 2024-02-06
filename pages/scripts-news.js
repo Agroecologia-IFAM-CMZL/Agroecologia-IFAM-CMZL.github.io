@@ -1,5 +1,5 @@
 // https://agro-server.onrender.com
-fetch('https://agro-server.onrender.com/users/6428b8ff-d438-464a-a312-170f1dc995d5/news', {
+fetch('http://localhost:8080/users/d53299bb-0952-45d4-8280-badc17d3a035/news', {
     method: 'GET',
     mode: 'cors',
     headers: {
@@ -29,10 +29,11 @@ fetch('https://agro-server.onrender.com/users/6428b8ff-d438-464a-a312-170f1dc995
 
             <div id="collapse${count}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <h2 style="text-align: center;"><strong>${response[count].caption}</strong> </h2>
-                    <p>${response[count].paragraphInit} <code>code</code>,</p>
-                    <p>${response[count].paragraphMiddle}.</p>
-                    <p>${response[count].paragraphEnd}.</p>
+                    <h2 style="text-align: center;"><strong>${response[count].subtitle}</strong> </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id tellus blandit lectus vulputate interdum a a risus. In faucibus elit sed ligula ultrices gravida. <code>code</code>,</p>
+                    <p>${response[count].paragraph01}.</p>
+                    <p>${response[count].paragraph02}.</p>
+                    <p>${response[count].paragraph03}.</p>
                     <a href="./news/news-example.html" class="link-success"> Saiba Mais </a>
                 </div>
             </div>
