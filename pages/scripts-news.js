@@ -1,5 +1,5 @@
 // https://agro-server.onrender.com
-fetch('http://localhost:8080/users/d53299bb-0952-45d4-8280-badc17d3a035/news', {
+fetch('https://my-json-server.typicode.com/CarlosViniMSouza/quakus-first-step/news', {
     method: 'GET',
     mode: 'cors',
     headers: {
@@ -9,7 +9,7 @@ fetch('http://localhost:8080/users/d53299bb-0952-45d4-8280-badc17d3a035/news', {
 }).then(response => {
     if (!response.ok) {
         throw new Error('Network response was not ok');
-    }
+    }                                                                                                    
 
     return response.json();
 }).then(response => {

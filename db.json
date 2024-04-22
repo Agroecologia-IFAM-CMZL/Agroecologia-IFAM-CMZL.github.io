@@ -1,0 +1,52 @@
+{
+    "users": [
+        {
+            "username": "Carlos Vini. M. Souza",
+            "email": "******@ifam.edu.br",
+            "id": "65df5b46d86fj97948002f14onh109le"
+        }
+    ],
+    "news": [
+        {
+            "_id": "65be5dbad86fe87948001f6b",
+            "user_id": "65df5b46d86fj97948002f14onh109le",
+            "title": "ABC Test 00",
+            "subtitle": "ABC Test subtitle 00",
+            "paragraph1": "This text is number 01 (from 00)",
+            "paragraph2": "This text is number 02 (from 00)",
+            "paragraph3": "This text is number 03 (from 00)",
+            "createdAt": "2024-02-03T15:37:30.247Z",
+            "updatedAt": "2024-02-03T15:37:30.247Z",
+            "__v": 0
+        },
+        {
+            "_id": "65c19324e03cd38699f1ec6f",
+            "user_id": "65df5b46d86fj97948002f14onh109le",
+            "title": "ABC Test 01",
+            "subtitle": "ABC Test subtitle 01",
+            "paragraph1": "This text is number 01 (from 01)",
+            "paragraph2": "This text is number 02 (from 01)",
+            "paragraph3": "This text is number 03 (from 01)",
+            "createdAt": "2024-02-06T02:02:12.012Z",
+            "updatedAt": "2024-02-06T02:02:12.012Z",
+            "__v": 0
+        },
+        {
+            "_id": "6625b9a14e411cff4f10aedb",
+            "user_id": "65df5b46d86fj97948002f14onh109le",
+            "title": "ABC Test 02",
+            "subtitle": "ABC Test subtitle 02",
+            "paragraph1": "This text is number 01 (from 02)",
+            "paragraph2": "This text is number 02 (from 02)",
+            "paragraph3": "This text is number 03 (from 02)",
+            "createdAt": "2024-04-22T01:13:05.604Z",
+            "updatedAt": "2024-04-22T01:13:05.604Z",
+            "__v": 0
+        }
+    ], 
+    "emails": [
+        {
+            "email": "******@ifam.edu.br"
+        }
+    ]
+}
