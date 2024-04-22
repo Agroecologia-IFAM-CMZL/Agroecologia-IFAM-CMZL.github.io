@@ -31,9 +31,9 @@ fetch('https://my-json-server.typicode.com/CarlosViniMSouza/quakus-first-step/ne
                 <div class="accordion-body">
                     <h2 style="text-align: center;"><strong>${response[count].subtitle}</strong> </h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id tellus blandit lectus vulputate interdum a a risus. In faucibus elit sed ligula ultrices gravida. <code>code</code>,</p>
-                    <p>${response[count].paragraph01}.</p>
-                    <p>${response[count].paragraph02}.</p>
-                    <p>${response[count].paragraph03}.</p>
+                    <p>${response[count].paragraph1}.</p>
+                    <p>${response[count].paragraph2}.</p>
+                    <p>${response[count].paragraph3}.</p>
                     <a href="./news/news-example.html" class="link-success"> Saiba Mais </a>
                 </div>
             </div>
