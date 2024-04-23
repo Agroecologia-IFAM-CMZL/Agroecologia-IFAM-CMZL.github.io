@@ -1,5 +1,5 @@
 // https://agro-server.onrender.com
-fetch('https://my-json-server.typicode.com/CarlosViniMSouza/quakus-first-step/news', {
+fetch('http://localhost:3030/api/news/view/65be5b24d86fe87948001f64', {
     method: 'GET',
     mode: 'cors',
     headers: {
